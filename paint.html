@@ -37,6 +37,7 @@ green.addEventListener("click", () => {
 });
 // drawing
 theCanvas.addEventListener('click', (event) => {
+	// this is were the X axis is fixed in full screen. But breaks in a half or quarter screen
 	c.fillRect(event.x - 250, event.y - 60, 10, 10);
 });
 
