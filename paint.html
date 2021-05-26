@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paint!</title>
+</head>
+<body>
+<p> Reload to clear the canvas! </p>
+<button id="blue">Blue</button>
+<button id="black">Black</button>
+<button id="red">Red</button>
+<button id="green">Green</button>
+<button id="pink">Pink</button>
+<canvas id="canvas" width="800" height="800"></canvas>
+<script>
+	const blue = document.getElementById('blue');
+	const black = document.getElementById('black');
+	const red = document.getElementById("red");
+	const pink = document.getElementById('pink');
+	const green = document.getElementById("green");
+	var c = document.getElementById('canvas').getContext('2d');
+	var theCanvas = document.getElementById('canvas');
+// changin color
+blue.addEventListener("click", () => {
+	c.fillStyle = 'blue';
+});
+black.addEventListener("click", () => {
+	c.fillStyle = 'black';
+});
+red.addEventListener("click", () => {
+	c.fillStyle = 'red';
+});
+pink.addEventListener("click", () => {
+	c.fillStyle = 'pink';
+});
+green.addEventListener("click", () => {
+	c.fillStyle = 'green';
+});
+// drawing
+theCanvas.addEventListener('click', (event) => {
+	c.fillRect(event.x - 250, event.y - 60, 10, 10);
+});
+
+</script>	
+</body>
+</html>
